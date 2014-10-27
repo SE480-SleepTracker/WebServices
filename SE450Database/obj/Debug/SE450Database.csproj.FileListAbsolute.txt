@@ -1,0 +1,5 @@
+E:\My Documents\Visual Studio 2012\Projects\SE450 Sleep Tracker Web API\SE450Database\bin\Debug\SE450Database.dll
+E:\My Documents\Visual Studio 2012\Projects\SE450 Sleep Tracker Web API\SE450Database\bin\Debug\SE450Database.pdb
+E:\My Documents\Visual Studio 2012\Projects\SE450 Sleep Tracker Web API\SE450Database\obj\Debug\SE450Database.csprojResolveAssemblyReference.cache
+E:\My Documents\Visual Studio 2012\Projects\SE450 Sleep Tracker Web API\SE450Database\obj\Debug\SE450Database.dll
+E:\My Documents\Visual Studio 2012\Projects\SE450 Sleep Tracker Web API\SE450Database\obj\Debug\SE450Database.pdb
