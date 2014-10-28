@@ -27,54 +27,72 @@ namespace SE450Database
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 		
-	#region Extensibility Method Definitions
-	partial void OnCreated();
-	partial void InsertBhv_Behavior(Bhv_Behavior instance);
-	partial void UpdateBhv_Behavior(Bhv_Behavior instance);
-	partial void DeleteBhv_Behavior(Bhv_Behavior instance);
-	partial void InsertChn_ChainAnalysis(Chn_ChainAnalysis instance);
-	partial void UpdateChn_ChainAnalysis(Chn_ChainAnalysis instance);
-	partial void DeleteChn_ChainAnalysis(Chn_ChainAnalysis instance);
-	partial void InsertEmt_Emotions(Emt_Emotions instance);
-	partial void UpdateEmt_Emotions(Emt_Emotions instance);
-	partial void DeleteEmt_Emotions(Emt_Emotions instance);
-	partial void InsertGft_GoalsForTomorrow(Gft_GoalsForTomorrow instance);
-	partial void UpdateGft_GoalsForTomorrow(Gft_GoalsForTomorrow instance);
-	partial void DeleteGft_GoalsForTomorrow(Gft_GoalsForTomorrow instance);
-	partial void InsertGsr_GlobalSuggestions(Gsr_GlobalSuggestions instance);
-	partial void UpdateGsr_GlobalSuggestions(Gsr_GlobalSuggestions instance);
-	partial void DeleteGsr_GlobalSuggestions(Gsr_GlobalSuggestions instance);
-	partial void InsertImc_ImmediateConsequences(Imc_ImmediateConsequences instance);
-	partial void UpdateImc_ImmediateConsequences(Imc_ImmediateConsequences instance);
-	partial void DeleteImc_ImmediateConsequences(Imc_ImmediateConsequences instance);
-	partial void InsertLtc_LongTermConsequences(Ltc_LongTermConsequences instance);
-	partial void UpdateLtc_LongTermConsequences(Ltc_LongTermConsequences instance);
-	partial void DeleteLtc_LongTermConsequences(Ltc_LongTermConsequences instance);
-	partial void InsertLtg_LongTermGoal(Ltg_LongTermGoal instance);
-	partial void UpdateLtg_LongTermGoal(Ltg_LongTermGoal instance);
-	partial void DeleteLtg_LongTermGoal(Ltg_LongTermGoal instance);
-	partial void InsertPre_PredefinedEmotion(Pre_PredefinedEmotion instance);
-	partial void UpdatePre_PredefinedEmotion(Pre_PredefinedEmotion instance);
-	partial void DeletePre_PredefinedEmotion(Pre_PredefinedEmotion instance);
-	partial void InsertRwd_Rewards(Rwd_Rewards instance);
-	partial void UpdateRwd_Rewards(Rwd_Rewards instance);
-	partial void DeleteRwd_Rewards(Rwd_Rewards instance);
-	partial void InsertStg_ShortTermGoals(Stg_ShortTermGoals instance);
-	partial void UpdateStg_ShortTermGoals(Stg_ShortTermGoals instance);
-	partial void DeleteStg_ShortTermGoals(Stg_ShortTermGoals instance);
-	partial void InsertTht_Thought(Tht_Thought instance);
-	partial void UpdateTht_Thought(Tht_Thought instance);
-	partial void DeleteTht_Thought(Tht_Thought instance);
-	partial void InsertUsr_User(Usr_User instance);
-	partial void UpdateUsr_User(Usr_User instance);
-	partial void DeleteUsr_User(Usr_User instance);
-	partial void InsertVul_Vulnerability(Vul_Vulnerability instance);
-	partial void UpdateVul_Vulnerability(Vul_Vulnerability instance);
-	partial void DeleteVul_Vulnerability(Vul_Vulnerability instance);
-	partial void InsertWtp_WaysToPrevent(Wtp_WaysToPrevent instance);
-	partial void UpdateWtp_WaysToPrevent(Wtp_WaysToPrevent instance);
-	partial void DeleteWtp_WaysToPrevent(Wtp_WaysToPrevent instance);
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnCreated();
+    partial void InsertBhv_Behavior(Bhv_Behavior instance);
+    partial void UpdateBhv_Behavior(Bhv_Behavior instance);
+    partial void DeleteBhv_Behavior(Bhv_Behavior instance);
+    partial void InsertCfn_CaffeineConsumption(Cfn_CaffeineConsumption instance);
+    partial void UpdateCfn_CaffeineConsumption(Cfn_CaffeineConsumption instance);
+    partial void DeleteCfn_CaffeineConsumption(Cfn_CaffeineConsumption instance);
+    partial void InsertCft_CaffeineType(Cft_CaffeineType instance);
+    partial void UpdateCft_CaffeineType(Cft_CaffeineType instance);
+    partial void DeleteCft_CaffeineType(Cft_CaffeineType instance);
+    partial void InsertChn_ChainAnalysis(Chn_ChainAnalysis instance);
+    partial void UpdateChn_ChainAnalysis(Chn_ChainAnalysis instance);
+    partial void DeleteChn_ChainAnalysis(Chn_ChainAnalysis instance);
+    partial void InsertEmt_Emotions(Emt_Emotions instance);
+    partial void UpdateEmt_Emotions(Emt_Emotions instance);
+    partial void DeleteEmt_Emotions(Emt_Emotions instance);
+    partial void InsertExi_ExerciseIntensity(Exi_ExerciseIntensity instance);
+    partial void UpdateExi_ExerciseIntensity(Exi_ExerciseIntensity instance);
+    partial void DeleteExi_ExerciseIntensity(Exi_ExerciseIntensity instance);
+    partial void InsertExr_Exercise(Exr_Exercise instance);
+    partial void UpdateExr_Exercise(Exr_Exercise instance);
+    partial void DeleteExr_Exercise(Exr_Exercise instance);
+    partial void InsertExt_ExerciseTypes(Ext_ExerciseTypes instance);
+    partial void UpdateExt_ExerciseTypes(Ext_ExerciseTypes instance);
+    partial void DeleteExt_ExerciseTypes(Ext_ExerciseTypes instance);
+    partial void InsertGft_GoalsForTomorrow(Gft_GoalsForTomorrow instance);
+    partial void UpdateGft_GoalsForTomorrow(Gft_GoalsForTomorrow instance);
+    partial void DeleteGft_GoalsForTomorrow(Gft_GoalsForTomorrow instance);
+    partial void InsertGsr_GlobalSuggestions(Gsr_GlobalSuggestions instance);
+    partial void UpdateGsr_GlobalSuggestions(Gsr_GlobalSuggestions instance);
+    partial void DeleteGsr_GlobalSuggestions(Gsr_GlobalSuggestions instance);
+    partial void InsertImc_ImmediateConsequences(Imc_ImmediateConsequences instance);
+    partial void UpdateImc_ImmediateConsequences(Imc_ImmediateConsequences instance);
+    partial void DeleteImc_ImmediateConsequences(Imc_ImmediateConsequences instance);
+    partial void InsertLtc_LongTermConsequences(Ltc_LongTermConsequences instance);
+    partial void UpdateLtc_LongTermConsequences(Ltc_LongTermConsequences instance);
+    partial void DeleteLtc_LongTermConsequences(Ltc_LongTermConsequences instance);
+    partial void InsertLtg_LongTermGoal(Ltg_LongTermGoal instance);
+    partial void UpdateLtg_LongTermGoal(Ltg_LongTermGoal instance);
+    partial void DeleteLtg_LongTermGoal(Ltg_LongTermGoal instance);
+    partial void InsertPrd_Product(Prd_Product instance);
+    partial void UpdatePrd_Product(Prd_Product instance);
+    partial void DeletePrd_Product(Prd_Product instance);
+    partial void InsertPre_PredefinedEmotion(Pre_PredefinedEmotion instance);
+    partial void UpdatePre_PredefinedEmotion(Pre_PredefinedEmotion instance);
+    partial void DeletePre_PredefinedEmotion(Pre_PredefinedEmotion instance);
+    partial void InsertRwd_Rewards(Rwd_Rewards instance);
+    partial void UpdateRwd_Rewards(Rwd_Rewards instance);
+    partial void DeleteRwd_Rewards(Rwd_Rewards instance);
+    partial void InsertStg_ShortTermGoals(Stg_ShortTermGoals instance);
+    partial void UpdateStg_ShortTermGoals(Stg_ShortTermGoals instance);
+    partial void DeleteStg_ShortTermGoals(Stg_ShortTermGoals instance);
+    partial void InsertTht_Thought(Tht_Thought instance);
+    partial void UpdateTht_Thought(Tht_Thought instance);
+    partial void DeleteTht_Thought(Tht_Thought instance);
+    partial void InsertUsr_User(Usr_User instance);
+    partial void UpdateUsr_User(Usr_User instance);
+    partial void DeleteUsr_User(Usr_User instance);
+    partial void InsertVul_Vulnerability(Vul_Vulnerability instance);
+    partial void UpdateVul_Vulnerability(Vul_Vulnerability instance);
+    partial void DeleteVul_Vulnerability(Vul_Vulnerability instance);
+    partial void InsertWtp_WaysToPrevent(Wtp_WaysToPrevent instance);
+    partial void UpdateWtp_WaysToPrevent(Wtp_WaysToPrevent instance);
+    partial void DeleteWtp_WaysToPrevent(Wtp_WaysToPrevent instance);
+    #endregion
 		
 		public SleepMonitor(string connection) : 
 				base(connection, mappingSource)
@@ -108,6 +126,22 @@ namespace SE450Database
 			}
 		}
 		
+		public System.Data.Linq.Table<Cfn_CaffeineConsumption> Cfn_CaffeineConsumption
+		{
+			get
+			{
+				return this.GetTable<Cfn_CaffeineConsumption>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Cft_CaffeineType> Cft_CaffeineType
+		{
+			get
+			{
+				return this.GetTable<Cft_CaffeineType>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Chn_ChainAnalysis> Chn_ChainAnalysis
 		{
 			get
@@ -121,6 +155,30 @@ namespace SE450Database
 			get
 			{
 				return this.GetTable<Emt_Emotions>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Exi_ExerciseIntensity> Exi_ExerciseIntensity
+		{
+			get
+			{
+				return this.GetTable<Exi_ExerciseIntensity>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Exr_Exercise> Exr_Exercise
+		{
+			get
+			{
+				return this.GetTable<Exr_Exercise>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Ext_ExerciseTypes> Ext_ExerciseTypes
+		{
+			get
+			{
+				return this.GetTable<Ext_ExerciseTypes>();
 			}
 		}
 		
@@ -161,6 +219,14 @@ namespace SE450Database
 			get
 			{
 				return this.GetTable<Ltg_LongTermGoal>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Prd_Product> Prd_Product
+		{
+			get
+			{
+				return this.GetTable<Prd_Product>();
 			}
 		}
 		
@@ -295,17 +361,17 @@ namespace SE450Database
 		
 		private EntityRef<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnBhv_orderChanging(int value);
-	partial void OnBhv_orderChanged();
-	partial void OnBhv_chn_idChanging(int value);
-	partial void OnBhv_chn_idChanged();
-	partial void OnBhv_BehaviorDescChanging(string value);
-	partial void OnBhv_BehaviorDescChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnBhv_orderChanging(int value);
+    partial void OnBhv_orderChanged();
+    partial void OnBhv_chn_idChanging(int value);
+    partial void OnBhv_chn_idChanged();
+    partial void OnBhv_BehaviorDescChanging(string value);
+    partial void OnBhv_BehaviorDescChanged();
+    #endregion
 		
 		public Bhv_Behavior()
 		{
@@ -428,6 +494,335 @@ namespace SE450Database
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.cfn_CaffeineConsumption")]
+	public partial class Cfn_CaffeineConsumption : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Cfn_ID;
+		
+		private System.DateTime _Cfn_DateTime;
+		
+		private int _Cfn_cft_ID;
+		
+		private int _Cfn_usr_ID;
+		
+		private int _Cfn_number;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCfn_IDChanging(int value);
+    partial void OnCfn_IDChanged();
+    partial void OnCfn_DateTimeChanging(System.DateTime value);
+    partial void OnCfn_DateTimeChanged();
+    partial void OnCfn_cft_IDChanging(int value);
+    partial void OnCfn_cft_IDChanged();
+    partial void OnCfn_usr_IDChanging(int value);
+    partial void OnCfn_usr_IDChanged();
+    partial void OnCfn_numberChanging(int value);
+    partial void OnCfn_numberChanged();
+    #endregion
+		
+		public Cfn_CaffeineConsumption()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="cfn_ID", Storage="_Cfn_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Cfn_ID
+		{
+			get
+			{
+				return this._Cfn_ID;
+			}
+			set
+			{
+				if ((this._Cfn_ID != value))
+				{
+					this.OnCfn_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Cfn_ID = value;
+					this.SendPropertyChanged("Cfn_ID");
+					this.OnCfn_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="cfn_DateTime", Storage="_Cfn_DateTime", DbType="DateTime NOT NULL")]
+		public System.DateTime Cfn_DateTime
+		{
+			get
+			{
+				return this._Cfn_DateTime;
+			}
+			set
+			{
+				if ((this._Cfn_DateTime != value))
+				{
+					this.OnCfn_DateTimeChanging(value);
+					this.SendPropertyChanging();
+					this._Cfn_DateTime = value;
+					this.SendPropertyChanged("Cfn_DateTime");
+					this.OnCfn_DateTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="cfn_cft_ID", Storage="_Cfn_cft_ID", DbType="Int NOT NULL")]
+		public int Cfn_cft_ID
+		{
+			get
+			{
+				return this._Cfn_cft_ID;
+			}
+			set
+			{
+				if ((this._Cfn_cft_ID != value))
+				{
+					this.OnCfn_cft_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Cfn_cft_ID = value;
+					this.SendPropertyChanged("Cfn_cft_ID");
+					this.OnCfn_cft_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="cfn_usr_ID", Storage="_Cfn_usr_ID", DbType="Int NOT NULL")]
+		public int Cfn_usr_ID
+		{
+			get
+			{
+				return this._Cfn_usr_ID;
+			}
+			set
+			{
+				if ((this._Cfn_usr_ID != value))
+				{
+					this.OnCfn_usr_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Cfn_usr_ID = value;
+					this.SendPropertyChanged("Cfn_usr_ID");
+					this.OnCfn_usr_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="cfn_number", Storage="_Cfn_number", DbType="Int NOT NULL")]
+		public int Cfn_number
+		{
+			get
+			{
+				return this._Cfn_number;
+			}
+			set
+			{
+				if ((this._Cfn_number != value))
+				{
+					this.OnCfn_numberChanging(value);
+					this.SendPropertyChanging();
+					this._Cfn_number = value;
+					this.SendPropertyChanged("Cfn_number");
+					this.OnCfn_numberChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.cft_CaffeineType")]
+	public partial class Cft_CaffeineType : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Cft_id;
+		
+		private double _Cft_amount;
+		
+		private double _Cft_size;
+		
+		private int _Prd_Product;
+		
+		private EntityRef<Prd_Product> _Cft_;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCft_idChanging(int value);
+    partial void OnCft_idChanged();
+    partial void OnCft_amountChanging(double value);
+    partial void OnCft_amountChanged();
+    partial void OnCft_sizeChanging(double value);
+    partial void OnCft_sizeChanged();
+    partial void OnPrd_ProductChanging(int value);
+    partial void OnPrd_ProductChanged();
+    #endregion
+		
+		public Cft_CaffeineType()
+		{
+			this._Cft_ = default(EntityRef<Prd_Product>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="cft_id", Storage="_Cft_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Cft_id
+		{
+			get
+			{
+				return this._Cft_id;
+			}
+			set
+			{
+				if ((this._Cft_id != value))
+				{
+					this.OnCft_idChanging(value);
+					this.SendPropertyChanging();
+					this._Cft_id = value;
+					this.SendPropertyChanged("Cft_id");
+					this.OnCft_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="cft_amount", Storage="_Cft_amount", DbType="Float NOT NULL")]
+		public double Cft_amount
+		{
+			get
+			{
+				return this._Cft_amount;
+			}
+			set
+			{
+				if ((this._Cft_amount != value))
+				{
+					this.OnCft_amountChanging(value);
+					this.SendPropertyChanging();
+					this._Cft_amount = value;
+					this.SendPropertyChanged("Cft_amount");
+					this.OnCft_amountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="cft_size", Storage="_Cft_size", DbType="Float NOT NULL")]
+		public double Cft_size
+		{
+			get
+			{
+				return this._Cft_size;
+			}
+			set
+			{
+				if ((this._Cft_size != value))
+				{
+					this.OnCft_sizeChanging(value);
+					this.SendPropertyChanging();
+					this._Cft_size = value;
+					this.SendPropertyChanged("Cft_size");
+					this.OnCft_sizeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="prd_Product", Storage="_Prd_Product", DbType="Int NOT NULL")]
+		public int Prd_Product
+		{
+			get
+			{
+				return this._Prd_Product;
+			}
+			set
+			{
+				if ((this._Prd_Product != value))
+				{
+					this.OnPrd_ProductChanging(value);
+					this.SendPropertyChanging();
+					this._Prd_Product = value;
+					this.SendPropertyChanged("Prd_Product");
+					this.OnPrd_ProductChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_cft_CaffeineType_prd_Product", Storage="_Cft_", ThisKey="Cft_id", OtherKey="Prd_ID", IsForeignKey=true)]
+		public Prd_Product Cft_
+		{
+			get
+			{
+				return this._Cft_.Entity;
+			}
+			set
+			{
+				Prd_Product previousValue = this._Cft_.Entity;
+				if (((previousValue != value) 
+							|| (this._Cft_.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Cft_.Entity = null;
+						previousValue.Cft_CaffeineType = null;
+					}
+					this._Cft_.Entity = value;
+					if ((value != null))
+					{
+						value.Cft_CaffeineType = this;
+						this._Cft_id = value.Prd_ID;
+					}
+					else
+					{
+						this._Cft_id = default(int);
+					}
+					this.SendPropertyChanged("Cft_");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.chn_ChainAnalysis")]
 	public partial class Chn_ChainAnalysis : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -466,21 +861,21 @@ namespace SE450Database
 		
 		private EntitySet<Wtp_WaysToPrevent> _Wtp_WaysToPrevent;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnChn_IDChanging(int value);
-	partial void OnChn_IDChanged();
-	partial void OnChn_usr_IDChanging(int value);
-	partial void OnChn_usr_IDChanged();
-	partial void OnChn_ProblemBehaviorChanging(string value);
-	partial void OnChn_ProblemBehaviorChanged();
-	partial void OnChn_DateAndTimeChanging(System.DateTime value);
-	partial void OnChn_DateAndTimeChanged();
-	partial void OnChn_LocationChanging(string value);
-	partial void OnChn_LocationChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnChn_IDChanging(int value);
+    partial void OnChn_IDChanged();
+    partial void OnChn_usr_IDChanging(int value);
+    partial void OnChn_usr_IDChanged();
+    partial void OnChn_ProblemBehaviorChanging(string value);
+    partial void OnChn_ProblemBehaviorChanged();
+    partial void OnChn_DateAndTimeChanging(System.DateTime value);
+    partial void OnChn_DateAndTimeChanged();
+    partial void OnChn_LocationChanging(string value);
+    partial void OnChn_LocationChanged();
+    #endregion
 		
 		public Chn_ChainAnalysis()
 		{
@@ -919,17 +1314,17 @@ namespace SE450Database
 		
 		private EntityRef<Pre_PredefinedEmotion> _Pre_PredefinedEmotion;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnEmt_orderChanging(int value);
-	partial void OnEmt_orderChanged();
-	partial void OnEmt_pre_idChanging(int value);
-	partial void OnEmt_pre_idChanged();
-	partial void OnEmt_chn_idChanging(int value);
-	partial void OnEmt_chn_idChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEmt_orderChanging(int value);
+    partial void OnEmt_orderChanged();
+    partial void OnEmt_pre_idChanging(int value);
+    partial void OnEmt_pre_idChanged();
+    partial void OnEmt_chn_idChanging(int value);
+    partial void OnEmt_chn_idChanged();
+    #endregion
 		
 		public Emt_Emotions()
 		{
@@ -1087,6 +1482,575 @@ namespace SE450Database
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.exi_ExerciseIntensity")]
+	public partial class Exi_ExerciseIntensity : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Exi_id;
+		
+		private string _Exi_intensity;
+		
+		private EntitySet<Exr_Exercise> _Exr_Exercise;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnExi_idChanging(int value);
+    partial void OnExi_idChanged();
+    partial void OnExi_intensityChanging(string value);
+    partial void OnExi_intensityChanged();
+    #endregion
+		
+		public Exi_ExerciseIntensity()
+		{
+			this._Exr_Exercise = new EntitySet<Exr_Exercise>(new Action<Exr_Exercise>(this.attach_Exr_Exercise), new Action<Exr_Exercise>(this.detach_Exr_Exercise));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="exi_id", Storage="_Exi_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Exi_id
+		{
+			get
+			{
+				return this._Exi_id;
+			}
+			set
+			{
+				if ((this._Exi_id != value))
+				{
+					this.OnExi_idChanging(value);
+					this.SendPropertyChanging();
+					this._Exi_id = value;
+					this.SendPropertyChanged("Exi_id");
+					this.OnExi_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="exi_intensity", Storage="_Exi_intensity", DbType="VarChar(MAX) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string Exi_intensity
+		{
+			get
+			{
+				return this._Exi_intensity;
+			}
+			set
+			{
+				if ((this._Exi_intensity != value))
+				{
+					this.OnExi_intensityChanging(value);
+					this.SendPropertyChanging();
+					this._Exi_intensity = value;
+					this.SendPropertyChanged("Exi_intensity");
+					this.OnExi_intensityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_exr_Exercise_exi_ExerciseIntensity", Storage="_Exr_Exercise", ThisKey="Exi_id", OtherKey="Exr_exi_ID", DeleteRule="NO ACTION")]
+		public EntitySet<Exr_Exercise> Exr_Exercise
+		{
+			get
+			{
+				return this._Exr_Exercise;
+			}
+			set
+			{
+				this._Exr_Exercise.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Exr_Exercise(Exr_Exercise entity)
+		{
+			this.SendPropertyChanging();
+			entity.Exi_ExerciseIntensity = this;
+		}
+		
+		private void detach_Exr_Exercise(Exr_Exercise entity)
+		{
+			this.SendPropertyChanging();
+			entity.Exi_ExerciseIntensity = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.exr_Exercise")]
+	public partial class Exr_Exercise : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Exr_ID;
+		
+		private int _Exr_usr_ID;
+		
+		private int _Exr_exi_ID;
+		
+		private System.DateTime _Exr_start;
+		
+		private System.DateTime _Exr_end;
+		
+		private int _Exr_ext_id;
+		
+		private EntityRef<Exi_ExerciseIntensity> _Exi_ExerciseIntensity;
+		
+		private EntityRef<Ext_ExerciseTypes> _Ext_ExerciseTypes;
+		
+		private EntityRef<Usr_User> _Usr_User;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnExr_IDChanging(int value);
+    partial void OnExr_IDChanged();
+    partial void OnExr_usr_IDChanging(int value);
+    partial void OnExr_usr_IDChanged();
+    partial void OnExr_exi_IDChanging(int value);
+    partial void OnExr_exi_IDChanged();
+    partial void OnExr_startChanging(System.DateTime value);
+    partial void OnExr_startChanged();
+    partial void OnExr_endChanging(System.DateTime value);
+    partial void OnExr_endChanged();
+    partial void OnExr_ext_idChanging(int value);
+    partial void OnExr_ext_idChanged();
+    #endregion
+		
+		public Exr_Exercise()
+		{
+			this._Exi_ExerciseIntensity = default(EntityRef<Exi_ExerciseIntensity>);
+			this._Ext_ExerciseTypes = default(EntityRef<Ext_ExerciseTypes>);
+			this._Usr_User = default(EntityRef<Usr_User>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="exr_ID", Storage="_Exr_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Exr_ID
+		{
+			get
+			{
+				return this._Exr_ID;
+			}
+			set
+			{
+				if ((this._Exr_ID != value))
+				{
+					this.OnExr_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Exr_ID = value;
+					this.SendPropertyChanged("Exr_ID");
+					this.OnExr_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="exr_usr_ID", Storage="_Exr_usr_ID", DbType="Int NOT NULL")]
+		public int Exr_usr_ID
+		{
+			get
+			{
+				return this._Exr_usr_ID;
+			}
+			set
+			{
+				if ((this._Exr_usr_ID != value))
+				{
+					this.OnExr_usr_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Exr_usr_ID = value;
+					this.SendPropertyChanged("Exr_usr_ID");
+					this.OnExr_usr_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="exr_exi_ID", Storage="_Exr_exi_ID", DbType="Int NOT NULL")]
+		public int Exr_exi_ID
+		{
+			get
+			{
+				return this._Exr_exi_ID;
+			}
+			set
+			{
+				if ((this._Exr_exi_ID != value))
+				{
+					this.OnExr_exi_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Exr_exi_ID = value;
+					this.SendPropertyChanged("Exr_exi_ID");
+					this.OnExr_exi_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="exr_start", Storage="_Exr_start", DbType="DateTime NOT NULL")]
+		public System.DateTime Exr_start
+		{
+			get
+			{
+				return this._Exr_start;
+			}
+			set
+			{
+				if ((this._Exr_start != value))
+				{
+					this.OnExr_startChanging(value);
+					this.SendPropertyChanging();
+					this._Exr_start = value;
+					this.SendPropertyChanged("Exr_start");
+					this.OnExr_startChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="exr_end", Storage="_Exr_end", DbType="DateTime NOT NULL")]
+		public System.DateTime Exr_end
+		{
+			get
+			{
+				return this._Exr_end;
+			}
+			set
+			{
+				if ((this._Exr_end != value))
+				{
+					this.OnExr_endChanging(value);
+					this.SendPropertyChanging();
+					this._Exr_end = value;
+					this.SendPropertyChanged("Exr_end");
+					this.OnExr_endChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="exr_ext_id", Storage="_Exr_ext_id", DbType="Int NOT NULL")]
+		public int Exr_ext_id
+		{
+			get
+			{
+				return this._Exr_ext_id;
+			}
+			set
+			{
+				if ((this._Exr_ext_id != value))
+				{
+					this.OnExr_ext_idChanging(value);
+					this.SendPropertyChanging();
+					this._Exr_ext_id = value;
+					this.SendPropertyChanged("Exr_ext_id");
+					this.OnExr_ext_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_exr_Exercise_exi_ExerciseIntensity", Storage="_Exi_ExerciseIntensity", ThisKey="Exr_exi_ID", OtherKey="Exi_id", IsForeignKey=true)]
+		public Exi_ExerciseIntensity Exi_ExerciseIntensity
+		{
+			get
+			{
+				return this._Exi_ExerciseIntensity.Entity;
+			}
+			set
+			{
+				Exi_ExerciseIntensity previousValue = this._Exi_ExerciseIntensity.Entity;
+				if (((previousValue != value) 
+							|| (this._Exi_ExerciseIntensity.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Exi_ExerciseIntensity.Entity = null;
+						previousValue.Exr_Exercise.Remove(this);
+					}
+					this._Exi_ExerciseIntensity.Entity = value;
+					if ((value != null))
+					{
+						value.Exr_Exercise.Add(this);
+						this._Exr_exi_ID = value.Exi_id;
+					}
+					else
+					{
+						this._Exr_exi_ID = default(int);
+					}
+					this.SendPropertyChanged("Exi_ExerciseIntensity");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_exr_Exercise_ext_ExerciseTypes", Storage="_Ext_ExerciseTypes", ThisKey="Exr_ext_id", OtherKey="Ext_ID", IsForeignKey=true)]
+		public Ext_ExerciseTypes Ext_ExerciseTypes
+		{
+			get
+			{
+				return this._Ext_ExerciseTypes.Entity;
+			}
+			set
+			{
+				Ext_ExerciseTypes previousValue = this._Ext_ExerciseTypes.Entity;
+				if (((previousValue != value) 
+							|| (this._Ext_ExerciseTypes.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Ext_ExerciseTypes.Entity = null;
+						previousValue.Exr_Exercise.Remove(this);
+					}
+					this._Ext_ExerciseTypes.Entity = value;
+					if ((value != null))
+					{
+						value.Exr_Exercise.Add(this);
+						this._Exr_ext_id = value.Ext_ID;
+					}
+					else
+					{
+						this._Exr_ext_id = default(int);
+					}
+					this.SendPropertyChanged("Ext_ExerciseTypes");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_exr_Exercise_usr_User", Storage="_Usr_User", ThisKey="Exr_usr_ID", OtherKey="Usr_ID", IsForeignKey=true)]
+		public Usr_User Usr_User
+		{
+			get
+			{
+				return this._Usr_User.Entity;
+			}
+			set
+			{
+				Usr_User previousValue = this._Usr_User.Entity;
+				if (((previousValue != value) 
+							|| (this._Usr_User.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Usr_User.Entity = null;
+						previousValue.Exr_Exercise.Remove(this);
+					}
+					this._Usr_User.Entity = value;
+					if ((value != null))
+					{
+						value.Exr_Exercise.Add(this);
+						this._Exr_usr_ID = value.Usr_ID;
+					}
+					else
+					{
+						this._Exr_usr_ID = default(int);
+					}
+					this.SendPropertyChanged("Usr_User");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ext_ExerciseTypes")]
+	public partial class Ext_ExerciseTypes : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Ext_ID;
+		
+		private int _Ext_exi_intensity;
+		
+		private double _Ext_calories_per_hour;
+		
+		private string _Ext_name;
+		
+		private EntitySet<Exr_Exercise> _Exr_Exercise;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnExt_IDChanging(int value);
+    partial void OnExt_IDChanged();
+    partial void OnExt_exi_intensityChanging(int value);
+    partial void OnExt_exi_intensityChanged();
+    partial void OnExt_calories_per_hourChanging(double value);
+    partial void OnExt_calories_per_hourChanged();
+    partial void OnExt_nameChanging(string value);
+    partial void OnExt_nameChanged();
+    #endregion
+		
+		public Ext_ExerciseTypes()
+		{
+			this._Exr_Exercise = new EntitySet<Exr_Exercise>(new Action<Exr_Exercise>(this.attach_Exr_Exercise), new Action<Exr_Exercise>(this.detach_Exr_Exercise));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ext_ID", Storage="_Ext_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Ext_ID
+		{
+			get
+			{
+				return this._Ext_ID;
+			}
+			set
+			{
+				if ((this._Ext_ID != value))
+				{
+					this.OnExt_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Ext_ID = value;
+					this.SendPropertyChanged("Ext_ID");
+					this.OnExt_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ext_exi_intensity", Storage="_Ext_exi_intensity", DbType="Int NOT NULL")]
+		public int Ext_exi_intensity
+		{
+			get
+			{
+				return this._Ext_exi_intensity;
+			}
+			set
+			{
+				if ((this._Ext_exi_intensity != value))
+				{
+					this.OnExt_exi_intensityChanging(value);
+					this.SendPropertyChanging();
+					this._Ext_exi_intensity = value;
+					this.SendPropertyChanged("Ext_exi_intensity");
+					this.OnExt_exi_intensityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ext_calories_per_hour", Storage="_Ext_calories_per_hour", DbType="Float NOT NULL")]
+		public double Ext_calories_per_hour
+		{
+			get
+			{
+				return this._Ext_calories_per_hour;
+			}
+			set
+			{
+				if ((this._Ext_calories_per_hour != value))
+				{
+					this.OnExt_calories_per_hourChanging(value);
+					this.SendPropertyChanging();
+					this._Ext_calories_per_hour = value;
+					this.SendPropertyChanged("Ext_calories_per_hour");
+					this.OnExt_calories_per_hourChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ext_name", Storage="_Ext_name", DbType="VarChar(MAX) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string Ext_name
+		{
+			get
+			{
+				return this._Ext_name;
+			}
+			set
+			{
+				if ((this._Ext_name != value))
+				{
+					this.OnExt_nameChanging(value);
+					this.SendPropertyChanging();
+					this._Ext_name = value;
+					this.SendPropertyChanged("Ext_name");
+					this.OnExt_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_exr_Exercise_ext_ExerciseTypes", Storage="_Exr_Exercise", ThisKey="Ext_ID", OtherKey="Exr_ext_id", DeleteRule="NO ACTION")]
+		public EntitySet<Exr_Exercise> Exr_Exercise
+		{
+			get
+			{
+				return this._Exr_Exercise;
+			}
+			set
+			{
+				this._Exr_Exercise.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Exr_Exercise(Exr_Exercise entity)
+		{
+			this.SendPropertyChanging();
+			entity.Ext_ExerciseTypes = this;
+		}
+		
+		private void detach_Exr_Exercise(Exr_Exercise entity)
+		{
+			this.SendPropertyChanging();
+			entity.Ext_ExerciseTypes = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.gft_GoalsForTomorrow")]
 	public partial class Gft_GoalsForTomorrow : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1101,17 +2065,17 @@ namespace SE450Database
 		
 		private EntityRef<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnGft_orderChanging(int value);
-	partial void OnGft_orderChanged();
-	partial void OnGft_chn_idChanging(int value);
-	partial void OnGft_chn_idChanged();
-	partial void OnGft_GoalChanging(string value);
-	partial void OnGft_GoalChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnGft_orderChanging(int value);
+    partial void OnGft_orderChanged();
+    partial void OnGft_chn_idChanging(int value);
+    partial void OnGft_chn_idChanged();
+    partial void OnGft_GoalChanging(string value);
+    partial void OnGft_GoalChanged();
+    #endregion
 		
 		public Gft_GoalsForTomorrow()
 		{
@@ -1248,17 +2212,17 @@ namespace SE450Database
 		
 		private EntitySet<Rwd_Rewards> _Rwd_Rewards;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnGsr_idChanging(int value);
-	partial void OnGsr_idChanged();
-	partial void OnGsr_RewardNameChanging(string value);
-	partial void OnGsr_RewardNameChanged();
-	partial void OnGsr_CheckMarksNeededChanging(int value);
-	partial void OnGsr_CheckMarksNeededChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnGsr_idChanging(int value);
+    partial void OnGsr_idChanged();
+    partial void OnGsr_RewardNameChanging(string value);
+    partial void OnGsr_RewardNameChanged();
+    partial void OnGsr_CheckMarksNeededChanging(int value);
+    partial void OnGsr_CheckMarksNeededChanged();
+    #endregion
 		
 		public Gsr_GlobalSuggestions()
 		{
@@ -1386,17 +2350,17 @@ namespace SE450Database
 		
 		private EntityRef<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnImc_orderChanging(int value);
-	partial void OnImc_orderChanged();
-	partial void OnImc_chn_idChanging(int value);
-	partial void OnImc_chn_idChanged();
-	partial void OnImc_ConsequenceChanging(string value);
-	partial void OnImc_ConsequenceChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnImc_orderChanging(int value);
+    partial void OnImc_orderChanged();
+    partial void OnImc_chn_idChanging(int value);
+    partial void OnImc_chn_idChanged();
+    partial void OnImc_ConsequenceChanging(string value);
+    partial void OnImc_ConsequenceChanged();
+    #endregion
 		
 		public Imc_ImmediateConsequences()
 		{
@@ -1533,17 +2497,17 @@ namespace SE450Database
 		
 		private EntityRef<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnLtc_orderChanging(int value);
-	partial void OnLtc_orderChanged();
-	partial void OnLtc_chn_idChanging(int value);
-	partial void OnLtc_chn_idChanged();
-	partial void OnLtc_ConsequenceChanging(string value);
-	partial void OnLtc_ConsequenceChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnLtc_orderChanging(int value);
+    partial void OnLtc_orderChanged();
+    partial void OnLtc_chn_idChanging(int value);
+    partial void OnLtc_chn_idChanged();
+    partial void OnLtc_ConsequenceChanging(string value);
+    partial void OnLtc_ConsequenceChanged();
+    #endregion
 		
 		public Ltc_LongTermConsequences()
 		{
@@ -1680,17 +2644,17 @@ namespace SE450Database
 		
 		private EntityRef<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnLtg_orderChanging(int value);
-	partial void OnLtg_orderChanged();
-	partial void OnLtg_chn_idChanging(int value);
-	partial void OnLtg_chn_idChanged();
-	partial void OnLtg_GoalChanging(string value);
-	partial void OnLtg_GoalChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnLtg_orderChanging(int value);
+    partial void OnLtg_orderChanged();
+    partial void OnLtg_chn_idChanging(int value);
+    partial void OnLtg_chn_idChanged();
+    partial void OnLtg_GoalChanging(string value);
+    partial void OnLtg_GoalChanged();
+    #endregion
 		
 		public Ltg_LongTermGoal()
 		{
@@ -1813,6 +2777,124 @@ namespace SE450Database
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.prd_Product")]
+	public partial class Prd_Product : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Prd_ID;
+		
+		private string _Prd_Name;
+		
+		private EntityRef<Cft_CaffeineType> _Cft_CaffeineType;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPrd_IDChanging(int value);
+    partial void OnPrd_IDChanged();
+    partial void OnPrd_NameChanging(string value);
+    partial void OnPrd_NameChanged();
+    #endregion
+		
+		public Prd_Product()
+		{
+			this._Cft_CaffeineType = default(EntityRef<Cft_CaffeineType>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="prd_ID", Storage="_Prd_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Prd_ID
+		{
+			get
+			{
+				return this._Prd_ID;
+			}
+			set
+			{
+				if ((this._Prd_ID != value))
+				{
+					this.OnPrd_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Prd_ID = value;
+					this.SendPropertyChanged("Prd_ID");
+					this.OnPrd_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="prd_Name", Storage="_Prd_Name", DbType="VarChar(MAX) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string Prd_Name
+		{
+			get
+			{
+				return this._Prd_Name;
+			}
+			set
+			{
+				if ((this._Prd_Name != value))
+				{
+					this.OnPrd_NameChanging(value);
+					this.SendPropertyChanging();
+					this._Prd_Name = value;
+					this.SendPropertyChanged("Prd_Name");
+					this.OnPrd_NameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_cft_CaffeineType_prd_Product", Storage="_Cft_CaffeineType", ThisKey="Prd_ID", OtherKey="Cft_id", IsUnique=true, IsForeignKey=false, DeleteRule="NO ACTION")]
+		public Cft_CaffeineType Cft_CaffeineType
+		{
+			get
+			{
+				return this._Cft_CaffeineType.Entity;
+			}
+			set
+			{
+				Cft_CaffeineType previousValue = this._Cft_CaffeineType.Entity;
+				if (((previousValue != value) 
+							|| (this._Cft_CaffeineType.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Cft_CaffeineType.Entity = null;
+						previousValue.Cft_ = null;
+					}
+					this._Cft_CaffeineType.Entity = value;
+					if ((value != null))
+					{
+						value.Cft_ = this;
+					}
+					this.SendPropertyChanged("Cft_CaffeineType");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.pre_PredefinedEmotion")]
 	public partial class Pre_PredefinedEmotion : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1825,15 +2907,15 @@ namespace SE450Database
 		
 		private EntitySet<Emt_Emotions> _Emt_Emotions;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnPre_IDChanging(int value);
-	partial void OnPre_IDChanged();
-	partial void OnPre_EmotionChanging(string value);
-	partial void OnPre_EmotionChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPre_IDChanging(int value);
+    partial void OnPre_IDChanged();
+    partial void OnPre_EmotionChanging(string value);
+    partial void OnPre_EmotionChanged();
+    #endregion
 		
 		public Pre_PredefinedEmotion()
 		{
@@ -1949,21 +3031,21 @@ namespace SE450Database
 		
 		private EntityRef<Gsr_GlobalSuggestions> _Gsr_GlobalSuggestions;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnRwd_usr_IDChanging(int value);
-	partial void OnRwd_usr_IDChanged();
-	partial void OnRwd_RewardNameChanging(string value);
-	partial void OnRwd_RewardNameChanged();
-	partial void OnRwd_gsr_idChanging(System.Nullable<int> value);
-	partial void OnRwd_gsr_idChanged();
-	partial void OnRwd_NumCheckMarksRequiredChanging(System.Nullable<int> value);
-	partial void OnRwd_NumCheckMarksRequiredChanged();
-	partial void OnRwd_IDChanging(int value);
-	partial void OnRwd_IDChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnRwd_usr_IDChanging(int value);
+    partial void OnRwd_usr_IDChanged();
+    partial void OnRwd_RewardNameChanging(string value);
+    partial void OnRwd_RewardNameChanged();
+    partial void OnRwd_gsr_idChanging(System.Nullable<int> value);
+    partial void OnRwd_gsr_idChanged();
+    partial void OnRwd_NumCheckMarksRequiredChanging(System.Nullable<int> value);
+    partial void OnRwd_NumCheckMarksRequiredChanged();
+    partial void OnRwd_IDChanging(int value);
+    partial void OnRwd_IDChanged();
+    #endregion
 		
 		public Rwd_Rewards()
 		{
@@ -2205,17 +3287,17 @@ namespace SE450Database
 		
 		private EntityRef<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnStg_orderChanging(int value);
-	partial void OnStg_orderChanged();
-	partial void OnStg_chn_idChanging(int value);
-	partial void OnStg_chn_idChanged();
-	partial void OnStg_GoalChanging(string value);
-	partial void OnStg_GoalChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnStg_orderChanging(int value);
+    partial void OnStg_orderChanged();
+    partial void OnStg_chn_idChanging(int value);
+    partial void OnStg_chn_idChanged();
+    partial void OnStg_GoalChanging(string value);
+    partial void OnStg_GoalChanged();
+    #endregion
 		
 		public Stg_ShortTermGoals()
 		{
@@ -2352,17 +3434,17 @@ namespace SE450Database
 		
 		private EntityRef<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnTht_orderChanging(int value);
-	partial void OnTht_orderChanged();
-	partial void OnTht_chn_IDChanging(int value);
-	partial void OnTht_chn_IDChanged();
-	partial void OnTht_Thought1Changing(string value);
-	partial void OnTht_Thought1Changed();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTht_orderChanging(int value);
+    partial void OnTht_orderChanged();
+    partial void OnTht_chn_IDChanging(int value);
+    partial void OnTht_chn_IDChanged();
+    partial void OnTht_Thought1Changing(string value);
+    partial void OnTht_Thought1Changed();
+    #endregion
 		
 		public Tht_Thought()
 		{
@@ -2501,23 +3583,26 @@ namespace SE450Database
 		
 		private EntitySet<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnUsr_IDChanging(int value);
-	partial void OnUsr_IDChanged();
-	partial void OnUsr_FirstNameChanging(string value);
-	partial void OnUsr_FirstNameChanged();
-	partial void OnUsr_LastNameChanging(string value);
-	partial void OnUsr_LastNameChanged();
-	partial void OnUsr_CurrentChecksChanging(int value);
-	partial void OnUsr_CurrentChecksChanged();
-	#endregion
+		private EntitySet<Exr_Exercise> _Exr_Exercise;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnUsr_IDChanging(int value);
+    partial void OnUsr_IDChanged();
+    partial void OnUsr_FirstNameChanging(string value);
+    partial void OnUsr_FirstNameChanged();
+    partial void OnUsr_LastNameChanging(string value);
+    partial void OnUsr_LastNameChanged();
+    partial void OnUsr_CurrentChecksChanging(int value);
+    partial void OnUsr_CurrentChecksChanged();
+    #endregion
 		
 		public Usr_User()
 		{
 			this._Chn_ChainAnalysis = new EntitySet<Chn_ChainAnalysis>(new Action<Chn_ChainAnalysis>(this.attach_Chn_ChainAnalysis), new Action<Chn_ChainAnalysis>(this.detach_Chn_ChainAnalysis));
+			this._Exr_Exercise = new EntitySet<Exr_Exercise>(new Action<Exr_Exercise>(this.attach_Exr_Exercise), new Action<Exr_Exercise>(this.detach_Exr_Exercise));
 			OnCreated();
 		}
 		
@@ -2614,6 +3699,19 @@ namespace SE450Database
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_exr_Exercise_usr_User", Storage="_Exr_Exercise", ThisKey="Usr_ID", OtherKey="Exr_usr_ID", DeleteRule="NO ACTION")]
+		public EntitySet<Exr_Exercise> Exr_Exercise
+		{
+			get
+			{
+				return this._Exr_Exercise;
+			}
+			set
+			{
+				this._Exr_Exercise.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2645,6 +3743,18 @@ namespace SE450Database
 			this.SendPropertyChanging();
 			entity.Usr_User = null;
 		}
+		
+		private void attach_Exr_Exercise(Exr_Exercise entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usr_User = this;
+		}
+		
+		private void detach_Exr_Exercise(Exr_Exercise entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usr_User = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vul_Vulnerability")]
@@ -2661,17 +3771,17 @@ namespace SE450Database
 		
 		private EntityRef<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnVul_orderChanging(int value);
-	partial void OnVul_orderChanged();
-	partial void OnVul_chn_idChanging(int value);
-	partial void OnVul_chn_idChanged();
-	partial void OnVul_Vulnerability1Changing(string value);
-	partial void OnVul_Vulnerability1Changed();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnVul_orderChanging(int value);
+    partial void OnVul_orderChanged();
+    partial void OnVul_chn_idChanging(int value);
+    partial void OnVul_chn_idChanged();
+    partial void OnVul_Vulnerability1Changing(string value);
+    partial void OnVul_Vulnerability1Changed();
+    #endregion
 		
 		public Vul_Vulnerability()
 		{
@@ -2808,17 +3918,17 @@ namespace SE450Database
 		
 		private EntityRef<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
-	#region Extensibility Method Definitions
-	partial void OnLoaded();
-	partial void OnValidate(System.Data.Linq.ChangeAction action);
-	partial void OnCreated();
-	partial void OnWtp_orderChanging(int value);
-	partial void OnWtp_orderChanged();
-	partial void OnWtp_chn_idChanging(int value);
-	partial void OnWtp_chn_idChanged();
-	partial void OnWtp_WayToPreventChanging(string value);
-	partial void OnWtp_WayToPreventChanged();
-	#endregion
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnWtp_orderChanging(int value);
+    partial void OnWtp_orderChanged();
+    partial void OnWtp_chn_idChanging(int value);
+    partial void OnWtp_chn_idChanged();
+    partial void OnWtp_WayToPreventChanging(string value);
+    partial void OnWtp_WayToPreventChanged();
+    #endregion
 		
 		public Wtp_WaysToPrevent()
 		{
