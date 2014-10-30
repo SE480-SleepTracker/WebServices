@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+//using System.Web.Mvc;
 using SE450_Sleep_Tracker_Web_API.Models;
 using SE450Database;
 using System.Configuration;
+using System.Web.Security;
+using System.Web.Http;
+using System.Web.OData;
 
 namespace SE450_Sleep_Tracker_Web_API.Controllers
 {
-    public class ChainAnalysisController : Controller
+    public class ChainAnalysisController : ODataController
     {
         private readonly string connectionString;
 
@@ -17,18 +20,90 @@ namespace SE450_Sleep_Tracker_Web_API.Controllers
         {
             connectionString = ConfigurationManager.ConnectionStrings["LinqConnection"].ConnectionString;
         }
+
+        private SleepMonitor GetInstance()
+        {
+            return new SleepMonitor(connectionString);
+        }
         //
         // GET: /ChainAnalysis/
 
-        public ActionResult Index()
+        /*public IHttpActionResult Index()
         {
             return View();
+        }*/
+
+        /// <summary>
+        /// Get a list for 
+        /// </summary>
+        /// <param name="id">User ID</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorize]
+        public IHttpActionResult GetAllAnalysisForUser(int id)
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                SleepMonitor monitor = new SleepMonitor(connectionString);
+                IEnumerable<ChainAnalysis> analysis = monitor.Chn_ChainAnalysis.Where(chn => chn.Chn_usr_ID == id).Select(chn => new ChainAnalysis(chn));
+
+                return Json<IEnumerable<ChainAnalysis>>(analysis);
+            }
+            // TODO return unauthorized
+            else return BadRequest("Unauthorized");
         }
 
-        public IEnumerable<ChainAnalysis> GetAllAnalysisForUser(int id)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id">Chain analysis ID</param>
+        [HttpDelete]
+        [Authorize]
+        public IHttpActionResult Delete(int id)
         {
-            SleepMonitor monitor = new SleepMonitor(connectionString);
-            return monitor.Chn_ChainAnalysis.Where(chn => chn.Chn_usr_ID == id).Select(chn => new ChainAnalysis(chn));
+            // TODO: how do I do this elsewhere? Is this right?
+            if (User.Identity.IsAuthenticated)
+            {
+                SleepMonitor monitor = new SleepMonitor(connectionString);
+                Chn_ChainAnalysis analysis = monitor.Chn_ChainAnalysis.FirstOrDefault(chn => chn.Chn_ID == id);
+
+                if (analysis == null)
+                    return BadRequest(String.Format("No chain analysis with ID {0} exists", id));
+                else
+                {
+                    try
+                    {
+                        monitor.Chn_ChainAnalysis.DeleteOnSubmit(analysis);
+
+                        return Ok("Successfully deleted");
+                    }
+                    catch (Exception e)
+                    {
+                        return BadRequest("Exception occurred during request. Message: " + e.Message);
+                    }
+                }
+            }
+            else
+                // TODO should be 401
+                return BadRequest("Not authorized");
+        }
+
+        [HttpPost]
+        [Authorize]
+        public IHttpActionResult Put(ChainAnalysis analysis)
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var monitor = GetInstance();
+
+                var item = analysis.ToChainAnalysis();
+
+                monitor.Chn_ChainAnalysis.InsertOnSubmit(item);
+
+                return Created(item);
+            }
+            // TODO should be 401
+            else return BadRequest("Not authorized");
         }
 
     }

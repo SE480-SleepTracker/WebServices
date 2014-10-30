@@ -15,6 +15,31 @@ namespace SE450_Sleep_Tracker_Web_API.Models
             // TODO: finish
         }
 
+        public Chn_ChainAnalysis ToChainAnalysis()
+        {
+            Chn_ChainAnalysis analysis = new Chn_ChainAnalysis();
+            //analysis.Tht_Thought.AddRange(this.Thoughts.Select(new Tht_Thought() { Tht_Thought1 = );
+            //analysis.Usr_User = this.AssociatedUser;
+            //analysis.Vul_Vulnerability.AddRange(this.)
+
+            int order = 0;            
+            foreach (string vulnerability in Vulnerabilities)
+            {
+                Vul_Vulnerability vul = new Vul_Vulnerability()
+                {
+                    Vul_chn_id = this.ID,
+                    Vul_Vulnerability1 = vulnerability,
+                    Vul_order = order
+                };
+
+                analysis.Vul_Vulnerability.Add(vul);
+
+                order++;
+            }
+            // TODO: write
+            return analysis;
+        }
+
         #region Chain Analysis Object
         public int ID
         {
@@ -42,7 +67,12 @@ namespace SE450_Sleep_Tracker_Web_API.Models
         #endregion
 
         #region Children
-        
+        public List<String> Vulnerabilities
+        {
+            get;
+            set;
+        }
+
         public String BehaviorChain
         {
             get;
