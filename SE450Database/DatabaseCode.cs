@@ -44,6 +44,9 @@ namespace SE450Database
     partial void InsertChn_ChainAnalysis(Chn_ChainAnalysis instance);
     partial void UpdateChn_ChainAnalysis(Chn_ChainAnalysis instance);
     partial void DeleteChn_ChainAnalysis(Chn_ChainAnalysis instance);
+    partial void InsertCtr_ConcentrationLog(Ctr_ConcentrationLog instance);
+    partial void UpdateCtr_ConcentrationLog(Ctr_ConcentrationLog instance);
+    partial void DeleteCtr_ConcentrationLog(Ctr_ConcentrationLog instance);
     partial void InsertEml_EmotionLog(Eml_EmotionLog instance);
     partial void UpdateEml_EmotionLog(Eml_EmotionLog instance);
     partial void DeleteEml_EmotionLog(Eml_EmotionLog instance);
@@ -167,6 +170,14 @@ namespace SE450Database
 			get
 			{
 				return this.GetTable<Chn_ChainAnalysis>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Ctr_ConcentrationLog> Ctr_ConcentrationLog
+		{
+			get
+			{
+				return this.GetTable<Ctr_ConcentrationLog>();
 			}
 		}
 		
@@ -1510,6 +1521,177 @@ namespace SE450Database
 		{
 			this.SendPropertyChanging();
 			entity.Chn_ChainAnalysis = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ctr_ConcentrationLog")]
+	public partial class Ctr_ConcentrationLog : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Ctr_id;
+		
+		private System.DateTime _Ctr_logDate;
+		
+		private int _Ctr_usr_id;
+		
+		private short _Ctr_concentrationLevels;
+		
+		private EntityRef<Usr_User> _Usr_User;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCtr_idChanging(int value);
+    partial void OnCtr_idChanged();
+    partial void OnCtr_logDateChanging(System.DateTime value);
+    partial void OnCtr_logDateChanged();
+    partial void OnCtr_usr_idChanging(int value);
+    partial void OnCtr_usr_idChanged();
+    partial void OnCtr_concentrationLevelsChanging(short value);
+    partial void OnCtr_concentrationLevelsChanged();
+    #endregion
+		
+		public Ctr_ConcentrationLog()
+		{
+			this._Usr_User = default(EntityRef<Usr_User>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ctr_id", Storage="_Ctr_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Ctr_id
+		{
+			get
+			{
+				return this._Ctr_id;
+			}
+			set
+			{
+				if ((this._Ctr_id != value))
+				{
+					this.OnCtr_idChanging(value);
+					this.SendPropertyChanging();
+					this._Ctr_id = value;
+					this.SendPropertyChanged("Ctr_id");
+					this.OnCtr_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ctr_logDate", Storage="_Ctr_logDate", DbType="DateTime NOT NULL")]
+		public System.DateTime Ctr_logDate
+		{
+			get
+			{
+				return this._Ctr_logDate;
+			}
+			set
+			{
+				if ((this._Ctr_logDate != value))
+				{
+					this.OnCtr_logDateChanging(value);
+					this.SendPropertyChanging();
+					this._Ctr_logDate = value;
+					this.SendPropertyChanged("Ctr_logDate");
+					this.OnCtr_logDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ctr_usr_id", Storage="_Ctr_usr_id", DbType="Int NOT NULL")]
+		public int Ctr_usr_id
+		{
+			get
+			{
+				return this._Ctr_usr_id;
+			}
+			set
+			{
+				if ((this._Ctr_usr_id != value))
+				{
+					this.OnCtr_usr_idChanging(value);
+					this.SendPropertyChanging();
+					this._Ctr_usr_id = value;
+					this.SendPropertyChanged("Ctr_usr_id");
+					this.OnCtr_usr_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ctr_concentrationLevels", Storage="_Ctr_concentrationLevels", DbType="SmallInt NOT NULL")]
+		public short Ctr_concentrationLevels
+		{
+			get
+			{
+				return this._Ctr_concentrationLevels;
+			}
+			set
+			{
+				if ((this._Ctr_concentrationLevels != value))
+				{
+					this.OnCtr_concentrationLevelsChanging(value);
+					this.SendPropertyChanging();
+					this._Ctr_concentrationLevels = value;
+					this.SendPropertyChanged("Ctr_concentrationLevels");
+					this.OnCtr_concentrationLevelsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_ctr_ConcentrationLog_usr_User", Storage="_Usr_User", ThisKey="Ctr_usr_id", OtherKey="Usr_ID", IsForeignKey=true)]
+		public Usr_User Usr_User
+		{
+			get
+			{
+				return this._Usr_User.Entity;
+			}
+			set
+			{
+				Usr_User previousValue = this._Usr_User.Entity;
+				if (((previousValue != value) 
+							|| (this._Usr_User.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Usr_User.Entity = null;
+						previousValue.Ctr_ConcentrationLog.Remove(this);
+					}
+					this._Usr_User.Entity = value;
+					if ((value != null))
+					{
+						value.Ctr_ConcentrationLog.Add(this);
+						this._Ctr_usr_id = value.Usr_ID;
+					}
+					else
+					{
+						this._Ctr_usr_id = default(int);
+					}
+					this.SendPropertyChanged("Usr_User");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
@@ -4491,6 +4673,8 @@ namespace SE450Database
 		
 		private EntitySet<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
+		private EntitySet<Ctr_ConcentrationLog> _Ctr_ConcentrationLog;
+		
 		private EntitySet<Eml_EmotionLog> _Eml_EmotionLog;
 		
 		private EntitySet<Exr_Exercise> _Exr_Exercise;
@@ -4514,6 +4698,7 @@ namespace SE450Database
 		public Usr_User()
 		{
 			this._Chn_ChainAnalysis = new EntitySet<Chn_ChainAnalysis>(new Action<Chn_ChainAnalysis>(this.attach_Chn_ChainAnalysis), new Action<Chn_ChainAnalysis>(this.detach_Chn_ChainAnalysis));
+			this._Ctr_ConcentrationLog = new EntitySet<Ctr_ConcentrationLog>(new Action<Ctr_ConcentrationLog>(this.attach_Ctr_ConcentrationLog), new Action<Ctr_ConcentrationLog>(this.detach_Ctr_ConcentrationLog));
 			this._Eml_EmotionLog = new EntitySet<Eml_EmotionLog>(new Action<Eml_EmotionLog>(this.attach_Eml_EmotionLog), new Action<Eml_EmotionLog>(this.detach_Eml_EmotionLog));
 			this._Exr_Exercise = new EntitySet<Exr_Exercise>(new Action<Exr_Exercise>(this.attach_Exr_Exercise), new Action<Exr_Exercise>(this.detach_Exr_Exercise));
 			this._Ftg_FatigueLevels = new EntitySet<Ftg_FatigueLevels>(new Action<Ftg_FatigueLevels>(this.attach_Ftg_FatigueLevels), new Action<Ftg_FatigueLevels>(this.detach_Ftg_FatigueLevels));
@@ -4613,6 +4798,19 @@ namespace SE450Database
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_ctr_ConcentrationLog_usr_User", Storage="_Ctr_ConcentrationLog", ThisKey="Usr_ID", OtherKey="Ctr_usr_id", DeleteRule="NO ACTION")]
+		public EntitySet<Ctr_ConcentrationLog> Ctr_ConcentrationLog
+		{
+			get
+			{
+				return this._Ctr_ConcentrationLog;
+			}
+			set
+			{
+				this._Ctr_ConcentrationLog.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_eml_EmotionLog_usr_User", Storage="_Eml_EmotionLog", ThisKey="Usr_ID", OtherKey="Eml_usr_id", DeleteRule="NO ACTION")]
 		public EntitySet<Eml_EmotionLog> Eml_EmotionLog
 		{
@@ -4679,6 +4877,18 @@ namespace SE450Database
 		}
 		
 		private void detach_Chn_ChainAnalysis(Chn_ChainAnalysis entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usr_User = null;
+		}
+		
+		private void attach_Ctr_ConcentrationLog(Ctr_ConcentrationLog entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usr_User = this;
+		}
+		
+		private void detach_Ctr_ConcentrationLog(Ctr_ConcentrationLog entity)
 		{
 			this.SendPropertyChanging();
 			entity.Usr_User = null;
