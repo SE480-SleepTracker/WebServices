@@ -29,6 +29,9 @@ namespace SE450Database
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertAwk_NighttimeAwakenings(Awk_NighttimeAwakenings instance);
+    partial void UpdateAwk_NighttimeAwakenings(Awk_NighttimeAwakenings instance);
+    partial void DeleteAwk_NighttimeAwakenings(Awk_NighttimeAwakenings instance);
     partial void InsertBhv_Behavior(Bhv_Behavior instance);
     partial void UpdateBhv_Behavior(Bhv_Behavior instance);
     partial void DeleteBhv_Behavior(Bhv_Behavior instance);
@@ -41,6 +44,9 @@ namespace SE450Database
     partial void InsertChn_ChainAnalysis(Chn_ChainAnalysis instance);
     partial void UpdateChn_ChainAnalysis(Chn_ChainAnalysis instance);
     partial void DeleteChn_ChainAnalysis(Chn_ChainAnalysis instance);
+    partial void InsertEml_EmotionLog(Eml_EmotionLog instance);
+    partial void UpdateEml_EmotionLog(Eml_EmotionLog instance);
+    partial void DeleteEml_EmotionLog(Eml_EmotionLog instance);
     partial void InsertEmt_Emotions(Emt_Emotions instance);
     partial void UpdateEmt_Emotions(Emt_Emotions instance);
     partial void DeleteEmt_Emotions(Emt_Emotions instance);
@@ -53,6 +59,9 @@ namespace SE450Database
     partial void InsertExt_ExerciseTypes(Ext_ExerciseTypes instance);
     partial void UpdateExt_ExerciseTypes(Ext_ExerciseTypes instance);
     partial void DeleteExt_ExerciseTypes(Ext_ExerciseTypes instance);
+    partial void InsertFtg_FatigueLevels(Ftg_FatigueLevels instance);
+    partial void UpdateFtg_FatigueLevels(Ftg_FatigueLevels instance);
+    partial void DeleteFtg_FatigueLevels(Ftg_FatigueLevels instance);
     partial void InsertGft_GoalsForTomorrow(Gft_GoalsForTomorrow instance);
     partial void UpdateGft_GoalsForTomorrow(Gft_GoalsForTomorrow instance);
     partial void DeleteGft_GoalsForTomorrow(Gft_GoalsForTomorrow instance);
@@ -77,6 +86,9 @@ namespace SE450Database
     partial void InsertRwd_Rewards(Rwd_Rewards instance);
     partial void UpdateRwd_Rewards(Rwd_Rewards instance);
     partial void DeleteRwd_Rewards(Rwd_Rewards instance);
+    partial void InsertSlp_SleepLog(Slp_SleepLog instance);
+    partial void UpdateSlp_SleepLog(Slp_SleepLog instance);
+    partial void DeleteSlp_SleepLog(Slp_SleepLog instance);
     partial void InsertStg_ShortTermGoals(Stg_ShortTermGoals instance);
     partial void UpdateStg_ShortTermGoals(Stg_ShortTermGoals instance);
     partial void DeleteStg_ShortTermGoals(Stg_ShortTermGoals instance);
@@ -118,6 +130,14 @@ namespace SE450Database
 			OnCreated();
 		}
 		
+		public System.Data.Linq.Table<Awk_NighttimeAwakenings> Awk_NighttimeAwakenings
+		{
+			get
+			{
+				return this.GetTable<Awk_NighttimeAwakenings>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Bhv_Behavior> Bhv_Behavior
 		{
 			get
@@ -150,6 +170,14 @@ namespace SE450Database
 			}
 		}
 		
+		public System.Data.Linq.Table<Eml_EmotionLog> Eml_EmotionLog
+		{
+			get
+			{
+				return this.GetTable<Eml_EmotionLog>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Emt_Emotions> Emt_Emotions
 		{
 			get
@@ -179,6 +207,14 @@ namespace SE450Database
 			get
 			{
 				return this.GetTable<Ext_ExerciseTypes>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Ftg_FatigueLevels> Ftg_FatigueLevels
+		{
+			get
+			{
+				return this.GetTable<Ftg_FatigueLevels>();
 			}
 		}
 		
@@ -243,6 +279,14 @@ namespace SE450Database
 			get
 			{
 				return this.GetTable<Rwd_Rewards>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Slp_SleepLog> Slp_SleepLog
+		{
+			get
+			{
+				return this.GetTable<Slp_SleepLog>();
 			}
 		}
 		
@@ -344,6 +388,177 @@ namespace SE450Database
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<Usr_GetAllUsersResult>)(result.ReturnValue));
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.awk_NighttimeAwakenings")]
+	public partial class Awk_NighttimeAwakenings : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Awk_ID;
+		
+		private System.DateTime _Awk_start;
+		
+		private System.Nullable<System.DateTime> _Awk_end;
+		
+		private int _Awk_slp_ID;
+		
+		private EntityRef<Slp_SleepLog> _Slp_SleepLog;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAwk_IDChanging(int value);
+    partial void OnAwk_IDChanged();
+    partial void OnAwk_startChanging(System.DateTime value);
+    partial void OnAwk_startChanged();
+    partial void OnAwk_endChanging(System.Nullable<System.DateTime> value);
+    partial void OnAwk_endChanged();
+    partial void OnAwk_slp_IDChanging(int value);
+    partial void OnAwk_slp_IDChanged();
+    #endregion
+		
+		public Awk_NighttimeAwakenings()
+		{
+			this._Slp_SleepLog = default(EntityRef<Slp_SleepLog>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="awk_ID", Storage="_Awk_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Awk_ID
+		{
+			get
+			{
+				return this._Awk_ID;
+			}
+			set
+			{
+				if ((this._Awk_ID != value))
+				{
+					this.OnAwk_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Awk_ID = value;
+					this.SendPropertyChanged("Awk_ID");
+					this.OnAwk_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="awk_start", Storage="_Awk_start", DbType="DateTime NOT NULL")]
+		public System.DateTime Awk_start
+		{
+			get
+			{
+				return this._Awk_start;
+			}
+			set
+			{
+				if ((this._Awk_start != value))
+				{
+					this.OnAwk_startChanging(value);
+					this.SendPropertyChanging();
+					this._Awk_start = value;
+					this.SendPropertyChanged("Awk_start");
+					this.OnAwk_startChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="awk_end", Storage="_Awk_end", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Awk_end
+		{
+			get
+			{
+				return this._Awk_end;
+			}
+			set
+			{
+				if ((this._Awk_end != value))
+				{
+					this.OnAwk_endChanging(value);
+					this.SendPropertyChanging();
+					this._Awk_end = value;
+					this.SendPropertyChanged("Awk_end");
+					this.OnAwk_endChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="awk_slp_ID", Storage="_Awk_slp_ID", DbType="Int NOT NULL")]
+		public int Awk_slp_ID
+		{
+			get
+			{
+				return this._Awk_slp_ID;
+			}
+			set
+			{
+				if ((this._Awk_slp_ID != value))
+				{
+					this.OnAwk_slp_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Awk_slp_ID = value;
+					this.SendPropertyChanged("Awk_slp_ID");
+					this.OnAwk_slp_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_awk_NighttimeAwakenings_slp_SleepLog", Storage="_Slp_SleepLog", ThisKey="Awk_ID", OtherKey="Slp_ID", IsForeignKey=true)]
+		public Slp_SleepLog Slp_SleepLog
+		{
+			get
+			{
+				return this._Slp_SleepLog.Entity;
+			}
+			set
+			{
+				Slp_SleepLog previousValue = this._Slp_SleepLog.Entity;
+				if (((previousValue != value) 
+							|| (this._Slp_SleepLog.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Slp_SleepLog.Entity = null;
+						previousValue.Awk_NighttimeAwakenings = null;
+					}
+					this._Slp_SleepLog.Entity = value;
+					if ((value != null))
+					{
+						value.Awk_NighttimeAwakenings = this;
+						this._Awk_ID = value.Slp_ID;
+					}
+					else
+					{
+						this._Awk_ID = default(int);
+					}
+					this.SendPropertyChanged("Slp_SleepLog");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
@@ -1298,6 +1513,262 @@ namespace SE450Database
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.eml_EmotionLog")]
+	public partial class Eml_EmotionLog : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Eml_ID;
+		
+		private System.DateTime _Eml_logTime;
+		
+		private int _Eml_usr_id;
+		
+		private int _Eml_pre_id;
+		
+		private short _Eml_intensity;
+		
+		private string _Eml_trigger;
+		
+		private EntityRef<Pre_PredefinedEmotion> _Pre_PredefinedEmotion;
+		
+		private EntityRef<Usr_User> _Usr_User;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEml_IDChanging(int value);
+    partial void OnEml_IDChanged();
+    partial void OnEml_logTimeChanging(System.DateTime value);
+    partial void OnEml_logTimeChanged();
+    partial void OnEml_usr_idChanging(int value);
+    partial void OnEml_usr_idChanged();
+    partial void OnEml_pre_idChanging(int value);
+    partial void OnEml_pre_idChanged();
+    partial void OnEml_intensityChanging(short value);
+    partial void OnEml_intensityChanged();
+    partial void OnEml_triggerChanging(string value);
+    partial void OnEml_triggerChanged();
+    #endregion
+		
+		public Eml_EmotionLog()
+		{
+			this._Pre_PredefinedEmotion = default(EntityRef<Pre_PredefinedEmotion>);
+			this._Usr_User = default(EntityRef<Usr_User>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="eml_ID", Storage="_Eml_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Eml_ID
+		{
+			get
+			{
+				return this._Eml_ID;
+			}
+			set
+			{
+				if ((this._Eml_ID != value))
+				{
+					this.OnEml_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Eml_ID = value;
+					this.SendPropertyChanged("Eml_ID");
+					this.OnEml_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="eml_logTime", Storage="_Eml_logTime", DbType="DateTime NOT NULL")]
+		public System.DateTime Eml_logTime
+		{
+			get
+			{
+				return this._Eml_logTime;
+			}
+			set
+			{
+				if ((this._Eml_logTime != value))
+				{
+					this.OnEml_logTimeChanging(value);
+					this.SendPropertyChanging();
+					this._Eml_logTime = value;
+					this.SendPropertyChanged("Eml_logTime");
+					this.OnEml_logTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="eml_usr_id", Storage="_Eml_usr_id", DbType="Int NOT NULL")]
+		public int Eml_usr_id
+		{
+			get
+			{
+				return this._Eml_usr_id;
+			}
+			set
+			{
+				if ((this._Eml_usr_id != value))
+				{
+					this.OnEml_usr_idChanging(value);
+					this.SendPropertyChanging();
+					this._Eml_usr_id = value;
+					this.SendPropertyChanged("Eml_usr_id");
+					this.OnEml_usr_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="eml_pre_id", Storage="_Eml_pre_id", DbType="Int NOT NULL")]
+		public int Eml_pre_id
+		{
+			get
+			{
+				return this._Eml_pre_id;
+			}
+			set
+			{
+				if ((this._Eml_pre_id != value))
+				{
+					this.OnEml_pre_idChanging(value);
+					this.SendPropertyChanging();
+					this._Eml_pre_id = value;
+					this.SendPropertyChanged("Eml_pre_id");
+					this.OnEml_pre_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="eml_intensity", Storage="_Eml_intensity", DbType="SmallInt NOT NULL")]
+		public short Eml_intensity
+		{
+			get
+			{
+				return this._Eml_intensity;
+			}
+			set
+			{
+				if ((this._Eml_intensity != value))
+				{
+					this.OnEml_intensityChanging(value);
+					this.SendPropertyChanging();
+					this._Eml_intensity = value;
+					this.SendPropertyChanged("Eml_intensity");
+					this.OnEml_intensityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="eml_trigger", Storage="_Eml_trigger", DbType="VarChar(MAX)", UpdateCheck=UpdateCheck.Never)]
+		public string Eml_trigger
+		{
+			get
+			{
+				return this._Eml_trigger;
+			}
+			set
+			{
+				if ((this._Eml_trigger != value))
+				{
+					this.OnEml_triggerChanging(value);
+					this.SendPropertyChanging();
+					this._Eml_trigger = value;
+					this.SendPropertyChanged("Eml_trigger");
+					this.OnEml_triggerChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_eml_EmotionLog_pre_PredefinedEmotion", Storage="_Pre_PredefinedEmotion", ThisKey="Eml_pre_id", OtherKey="Pre_ID", IsForeignKey=true)]
+		public Pre_PredefinedEmotion Pre_PredefinedEmotion
+		{
+			get
+			{
+				return this._Pre_PredefinedEmotion.Entity;
+			}
+			set
+			{
+				Pre_PredefinedEmotion previousValue = this._Pre_PredefinedEmotion.Entity;
+				if (((previousValue != value) 
+							|| (this._Pre_PredefinedEmotion.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Pre_PredefinedEmotion.Entity = null;
+						previousValue.Eml_EmotionLog.Remove(this);
+					}
+					this._Pre_PredefinedEmotion.Entity = value;
+					if ((value != null))
+					{
+						value.Eml_EmotionLog.Add(this);
+						this._Eml_pre_id = value.Pre_ID;
+					}
+					else
+					{
+						this._Eml_pre_id = default(int);
+					}
+					this.SendPropertyChanged("Pre_PredefinedEmotion");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_eml_EmotionLog_usr_User", Storage="_Usr_User", ThisKey="Eml_usr_id", OtherKey="Usr_ID", IsForeignKey=true)]
+		public Usr_User Usr_User
+		{
+			get
+			{
+				return this._Usr_User.Entity;
+			}
+			set
+			{
+				Usr_User previousValue = this._Usr_User.Entity;
+				if (((previousValue != value) 
+							|| (this._Usr_User.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Usr_User.Entity = null;
+						previousValue.Eml_EmotionLog.Remove(this);
+					}
+					this._Usr_User.Entity = value;
+					if ((value != null))
+					{
+						value.Eml_EmotionLog.Add(this);
+						this._Eml_usr_id = value.Usr_ID;
+					}
+					else
+					{
+						this._Eml_usr_id = default(int);
+					}
+					this.SendPropertyChanged("Usr_User");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.emt_Emotions")]
 	public partial class Emt_Emotions : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2048,6 +2519,177 @@ namespace SE450Database
 		{
 			this.SendPropertyChanging();
 			entity.Ext_ExerciseTypes = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ftg_FatigueLevels")]
+	public partial class Ftg_FatigueLevels : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Ftg_ID;
+		
+		private short _Ftg_level;
+		
+		private System.DateTime _Ftg_logTime;
+		
+		private int _Ftg_usr_id;
+		
+		private EntityRef<Usr_User> _Usr_User;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnFtg_IDChanging(int value);
+    partial void OnFtg_IDChanged();
+    partial void OnFtg_levelChanging(short value);
+    partial void OnFtg_levelChanged();
+    partial void OnFtg_logTimeChanging(System.DateTime value);
+    partial void OnFtg_logTimeChanged();
+    partial void OnFtg_usr_idChanging(int value);
+    partial void OnFtg_usr_idChanged();
+    #endregion
+		
+		public Ftg_FatigueLevels()
+		{
+			this._Usr_User = default(EntityRef<Usr_User>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ftg_ID", Storage="_Ftg_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Ftg_ID
+		{
+			get
+			{
+				return this._Ftg_ID;
+			}
+			set
+			{
+				if ((this._Ftg_ID != value))
+				{
+					this.OnFtg_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Ftg_ID = value;
+					this.SendPropertyChanged("Ftg_ID");
+					this.OnFtg_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ftg_level", Storage="_Ftg_level", DbType="SmallInt NOT NULL")]
+		public short Ftg_level
+		{
+			get
+			{
+				return this._Ftg_level;
+			}
+			set
+			{
+				if ((this._Ftg_level != value))
+				{
+					this.OnFtg_levelChanging(value);
+					this.SendPropertyChanging();
+					this._Ftg_level = value;
+					this.SendPropertyChanged("Ftg_level");
+					this.OnFtg_levelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ftg_logTime", Storage="_Ftg_logTime", DbType="DateTime NOT NULL")]
+		public System.DateTime Ftg_logTime
+		{
+			get
+			{
+				return this._Ftg_logTime;
+			}
+			set
+			{
+				if ((this._Ftg_logTime != value))
+				{
+					this.OnFtg_logTimeChanging(value);
+					this.SendPropertyChanging();
+					this._Ftg_logTime = value;
+					this.SendPropertyChanged("Ftg_logTime");
+					this.OnFtg_logTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ftg_usr_id", Storage="_Ftg_usr_id", DbType="Int NOT NULL")]
+		public int Ftg_usr_id
+		{
+			get
+			{
+				return this._Ftg_usr_id;
+			}
+			set
+			{
+				if ((this._Ftg_usr_id != value))
+				{
+					this.OnFtg_usr_idChanging(value);
+					this.SendPropertyChanging();
+					this._Ftg_usr_id = value;
+					this.SendPropertyChanged("Ftg_usr_id");
+					this.OnFtg_usr_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_ftg_FatigueLevels_usr_User", Storage="_Usr_User", ThisKey="Ftg_usr_id", OtherKey="Usr_ID", IsForeignKey=true)]
+		public Usr_User Usr_User
+		{
+			get
+			{
+				return this._Usr_User.Entity;
+			}
+			set
+			{
+				Usr_User previousValue = this._Usr_User.Entity;
+				if (((previousValue != value) 
+							|| (this._Usr_User.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Usr_User.Entity = null;
+						previousValue.Ftg_FatigueLevels.Remove(this);
+					}
+					this._Usr_User.Entity = value;
+					if ((value != null))
+					{
+						value.Ftg_FatigueLevels.Add(this);
+						this._Ftg_usr_id = value.Usr_ID;
+					}
+					else
+					{
+						this._Ftg_usr_id = default(int);
+					}
+					this.SendPropertyChanged("Usr_User");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
@@ -2905,6 +3547,8 @@ namespace SE450Database
 		
 		private string _Pre_Emotion;
 		
+		private EntitySet<Eml_EmotionLog> _Eml_EmotionLog;
+		
 		private EntitySet<Emt_Emotions> _Emt_Emotions;
 		
     #region Extensibility Method Definitions
@@ -2919,6 +3563,7 @@ namespace SE450Database
 		
 		public Pre_PredefinedEmotion()
 		{
+			this._Eml_EmotionLog = new EntitySet<Eml_EmotionLog>(new Action<Eml_EmotionLog>(this.attach_Eml_EmotionLog), new Action<Eml_EmotionLog>(this.detach_Eml_EmotionLog));
 			this._Emt_Emotions = new EntitySet<Emt_Emotions>(new Action<Emt_Emotions>(this.attach_Emt_Emotions), new Action<Emt_Emotions>(this.detach_Emt_Emotions));
 			OnCreated();
 		}
@@ -2963,6 +3608,19 @@ namespace SE450Database
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_eml_EmotionLog_pre_PredefinedEmotion", Storage="_Eml_EmotionLog", ThisKey="Pre_ID", OtherKey="Eml_pre_id", DeleteRule="NO ACTION")]
+		public EntitySet<Eml_EmotionLog> Eml_EmotionLog
+		{
+			get
+			{
+				return this._Eml_EmotionLog;
+			}
+			set
+			{
+				this._Eml_EmotionLog.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_emt_Emotions_pre_PredefinedEmotion", Storage="_Emt_Emotions", ThisKey="Pre_ID", OtherKey="Emt_pre_id", DeleteRule="NO ACTION")]
 		public EntitySet<Emt_Emotions> Emt_Emotions
 		{
@@ -2994,6 +3652,18 @@ namespace SE450Database
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_Eml_EmotionLog(Eml_EmotionLog entity)
+		{
+			this.SendPropertyChanging();
+			entity.Pre_PredefinedEmotion = this;
+		}
+		
+		private void detach_Eml_EmotionLog(Eml_EmotionLog entity)
+		{
+			this.SendPropertyChanging();
+			entity.Pre_PredefinedEmotion = null;
 		}
 		
 		private void attach_Emt_Emotions(Emt_Emotions entity)
@@ -3248,6 +3918,244 @@ namespace SE450Database
 						this._Rwd_gsr_id = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Gsr_GlobalSuggestions");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.slp_SleepLog")]
+	public partial class Slp_SleepLog : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Slp_ID;
+		
+		private int _Slp_usr_ID;
+		
+		private System.DateTime _Slp_date;
+		
+		private System.Nullable<System.TimeSpan> _Slp_TimeToSleepUserLogged;
+		
+		private System.TimeSpan _Slp_TimeToBed;
+		
+		private System.Nullable<short> _Slp_SleepQuality;
+		
+		private System.Nullable<short> _Slp_FatigueLevel;
+		
+		private EntityRef<Awk_NighttimeAwakenings> _Awk_NighttimeAwakenings;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSlp_IDChanging(int value);
+    partial void OnSlp_IDChanged();
+    partial void OnSlp_usr_IDChanging(int value);
+    partial void OnSlp_usr_IDChanged();
+    partial void OnSlp_dateChanging(System.DateTime value);
+    partial void OnSlp_dateChanged();
+    partial void OnSlp_TimeToSleepUserLoggedChanging(System.Nullable<System.TimeSpan> value);
+    partial void OnSlp_TimeToSleepUserLoggedChanged();
+    partial void OnSlp_TimeToBedChanging(System.TimeSpan value);
+    partial void OnSlp_TimeToBedChanged();
+    partial void OnSlp_SleepQualityChanging(System.Nullable<short> value);
+    partial void OnSlp_SleepQualityChanged();
+    partial void OnSlp_FatigueLevelChanging(System.Nullable<short> value);
+    partial void OnSlp_FatigueLevelChanged();
+    #endregion
+		
+		public Slp_SleepLog()
+		{
+			this._Awk_NighttimeAwakenings = default(EntityRef<Awk_NighttimeAwakenings>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="slp_ID", Storage="_Slp_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Slp_ID
+		{
+			get
+			{
+				return this._Slp_ID;
+			}
+			set
+			{
+				if ((this._Slp_ID != value))
+				{
+					this.OnSlp_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Slp_ID = value;
+					this.SendPropertyChanged("Slp_ID");
+					this.OnSlp_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="slp_usr_ID", Storage="_Slp_usr_ID", DbType="Int NOT NULL")]
+		public int Slp_usr_ID
+		{
+			get
+			{
+				return this._Slp_usr_ID;
+			}
+			set
+			{
+				if ((this._Slp_usr_ID != value))
+				{
+					this.OnSlp_usr_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Slp_usr_ID = value;
+					this.SendPropertyChanged("Slp_usr_ID");
+					this.OnSlp_usr_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="slp_date", Storage="_Slp_date", DbType="Date NOT NULL")]
+		public System.DateTime Slp_date
+		{
+			get
+			{
+				return this._Slp_date;
+			}
+			set
+			{
+				if ((this._Slp_date != value))
+				{
+					this.OnSlp_dateChanging(value);
+					this.SendPropertyChanging();
+					this._Slp_date = value;
+					this.SendPropertyChanged("Slp_date");
+					this.OnSlp_dateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="slp_TimeToSleepUserLogged", Storage="_Slp_TimeToSleepUserLogged", DbType="Time(7)")]
+		public System.Nullable<System.TimeSpan> Slp_TimeToSleepUserLogged
+		{
+			get
+			{
+				return this._Slp_TimeToSleepUserLogged;
+			}
+			set
+			{
+				if ((this._Slp_TimeToSleepUserLogged != value))
+				{
+					this.OnSlp_TimeToSleepUserLoggedChanging(value);
+					this.SendPropertyChanging();
+					this._Slp_TimeToSleepUserLogged = value;
+					this.SendPropertyChanged("Slp_TimeToSleepUserLogged");
+					this.OnSlp_TimeToSleepUserLoggedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="slp_TimeToBed", Storage="_Slp_TimeToBed", DbType="Time(7) NOT NULL")]
+		public System.TimeSpan Slp_TimeToBed
+		{
+			get
+			{
+				return this._Slp_TimeToBed;
+			}
+			set
+			{
+				if ((this._Slp_TimeToBed != value))
+				{
+					this.OnSlp_TimeToBedChanging(value);
+					this.SendPropertyChanging();
+					this._Slp_TimeToBed = value;
+					this.SendPropertyChanged("Slp_TimeToBed");
+					this.OnSlp_TimeToBedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="slp_SleepQuality", Storage="_Slp_SleepQuality", DbType="SmallInt")]
+		public System.Nullable<short> Slp_SleepQuality
+		{
+			get
+			{
+				return this._Slp_SleepQuality;
+			}
+			set
+			{
+				if ((this._Slp_SleepQuality != value))
+				{
+					this.OnSlp_SleepQualityChanging(value);
+					this.SendPropertyChanging();
+					this._Slp_SleepQuality = value;
+					this.SendPropertyChanged("Slp_SleepQuality");
+					this.OnSlp_SleepQualityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="slp_FatigueLevel", Storage="_Slp_FatigueLevel", DbType="SmallInt")]
+		public System.Nullable<short> Slp_FatigueLevel
+		{
+			get
+			{
+				return this._Slp_FatigueLevel;
+			}
+			set
+			{
+				if ((this._Slp_FatigueLevel != value))
+				{
+					this.OnSlp_FatigueLevelChanging(value);
+					this.SendPropertyChanging();
+					this._Slp_FatigueLevel = value;
+					this.SendPropertyChanged("Slp_FatigueLevel");
+					this.OnSlp_FatigueLevelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_awk_NighttimeAwakenings_slp_SleepLog", Storage="_Awk_NighttimeAwakenings", ThisKey="Slp_ID", OtherKey="Awk_ID", IsUnique=true, IsForeignKey=false, DeleteRule="NO ACTION")]
+		public Awk_NighttimeAwakenings Awk_NighttimeAwakenings
+		{
+			get
+			{
+				return this._Awk_NighttimeAwakenings.Entity;
+			}
+			set
+			{
+				Awk_NighttimeAwakenings previousValue = this._Awk_NighttimeAwakenings.Entity;
+				if (((previousValue != value) 
+							|| (this._Awk_NighttimeAwakenings.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Awk_NighttimeAwakenings.Entity = null;
+						previousValue.Slp_SleepLog = null;
+					}
+					this._Awk_NighttimeAwakenings.Entity = value;
+					if ((value != null))
+					{
+						value.Slp_SleepLog = this;
+					}
+					this.SendPropertyChanged("Awk_NighttimeAwakenings");
 				}
 			}
 		}
@@ -3583,7 +4491,11 @@ namespace SE450Database
 		
 		private EntitySet<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
+		private EntitySet<Eml_EmotionLog> _Eml_EmotionLog;
+		
 		private EntitySet<Exr_Exercise> _Exr_Exercise;
+		
+		private EntitySet<Ftg_FatigueLevels> _Ftg_FatigueLevels;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3602,7 +4514,9 @@ namespace SE450Database
 		public Usr_User()
 		{
 			this._Chn_ChainAnalysis = new EntitySet<Chn_ChainAnalysis>(new Action<Chn_ChainAnalysis>(this.attach_Chn_ChainAnalysis), new Action<Chn_ChainAnalysis>(this.detach_Chn_ChainAnalysis));
+			this._Eml_EmotionLog = new EntitySet<Eml_EmotionLog>(new Action<Eml_EmotionLog>(this.attach_Eml_EmotionLog), new Action<Eml_EmotionLog>(this.detach_Eml_EmotionLog));
 			this._Exr_Exercise = new EntitySet<Exr_Exercise>(new Action<Exr_Exercise>(this.attach_Exr_Exercise), new Action<Exr_Exercise>(this.detach_Exr_Exercise));
+			this._Ftg_FatigueLevels = new EntitySet<Ftg_FatigueLevels>(new Action<Ftg_FatigueLevels>(this.attach_Ftg_FatigueLevels), new Action<Ftg_FatigueLevels>(this.detach_Ftg_FatigueLevels));
 			OnCreated();
 		}
 		
@@ -3699,6 +4613,19 @@ namespace SE450Database
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_eml_EmotionLog_usr_User", Storage="_Eml_EmotionLog", ThisKey="Usr_ID", OtherKey="Eml_usr_id", DeleteRule="NO ACTION")]
+		public EntitySet<Eml_EmotionLog> Eml_EmotionLog
+		{
+			get
+			{
+				return this._Eml_EmotionLog;
+			}
+			set
+			{
+				this._Eml_EmotionLog.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_exr_Exercise_usr_User", Storage="_Exr_Exercise", ThisKey="Usr_ID", OtherKey="Exr_usr_ID", DeleteRule="NO ACTION")]
 		public EntitySet<Exr_Exercise> Exr_Exercise
 		{
@@ -3709,6 +4636,19 @@ namespace SE450Database
 			set
 			{
 				this._Exr_Exercise.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_ftg_FatigueLevels_usr_User", Storage="_Ftg_FatigueLevels", ThisKey="Usr_ID", OtherKey="Ftg_usr_id", DeleteRule="NO ACTION")]
+		public EntitySet<Ftg_FatigueLevels> Ftg_FatigueLevels
+		{
+			get
+			{
+				return this._Ftg_FatigueLevels;
+			}
+			set
+			{
+				this._Ftg_FatigueLevels.Assign(value);
 			}
 		}
 		
@@ -3744,6 +4684,18 @@ namespace SE450Database
 			entity.Usr_User = null;
 		}
 		
+		private void attach_Eml_EmotionLog(Eml_EmotionLog entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usr_User = this;
+		}
+		
+		private void detach_Eml_EmotionLog(Eml_EmotionLog entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usr_User = null;
+		}
+		
 		private void attach_Exr_Exercise(Exr_Exercise entity)
 		{
 			this.SendPropertyChanging();
@@ -3751,6 +4703,18 @@ namespace SE450Database
 		}
 		
 		private void detach_Exr_Exercise(Exr_Exercise entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usr_User = null;
+		}
+		
+		private void attach_Ftg_FatigueLevels(Ftg_FatigueLevels entity)
+		{
+			this.SendPropertyChanging();
+			entity.Usr_User = this;
+		}
+		
+		private void detach_Ftg_FatigueLevels(Ftg_FatigueLevels entity)
 		{
 			this.SendPropertyChanging();
 			entity.Usr_User = null;
