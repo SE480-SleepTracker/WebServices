@@ -4671,6 +4671,12 @@ namespace SE450Database
 		
 		private int _Usr_CurrentChecks;
 		
+		private string _Usr_EmailAddress;
+		
+		private string _Usr_CellPhone;
+		
+		private string _Usr_HomePhone;
+		
 		private EntitySet<Chn_ChainAnalysis> _Chn_ChainAnalysis;
 		
 		private EntitySet<Ctr_ConcentrationLog> _Ctr_ConcentrationLog;
@@ -4693,6 +4699,12 @@ namespace SE450Database
     partial void OnUsr_LastNameChanged();
     partial void OnUsr_CurrentChecksChanging(int value);
     partial void OnUsr_CurrentChecksChanged();
+    partial void OnUsr_EmailAddressChanging(string value);
+    partial void OnUsr_EmailAddressChanged();
+    partial void OnUsr_CellPhoneChanging(string value);
+    partial void OnUsr_CellPhoneChanged();
+    partial void OnUsr_HomePhoneChanging(string value);
+    partial void OnUsr_HomePhoneChanged();
     #endregion
 		
 		public Usr_User()
@@ -4781,6 +4793,66 @@ namespace SE450Database
 					this._Usr_CurrentChecks = value;
 					this.SendPropertyChanged("Usr_CurrentChecks");
 					this.OnUsr_CurrentChecksChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="usr_EmailAddress", Storage="_Usr_EmailAddress", DbType="VarChar(MAX)", UpdateCheck=UpdateCheck.Never)]
+		public string Usr_EmailAddress
+		{
+			get
+			{
+				return this._Usr_EmailAddress;
+			}
+			set
+			{
+				if ((this._Usr_EmailAddress != value))
+				{
+					this.OnUsr_EmailAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Usr_EmailAddress = value;
+					this.SendPropertyChanged("Usr_EmailAddress");
+					this.OnUsr_EmailAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="usr_CellPhone", Storage="_Usr_CellPhone", DbType="VarChar(MAX)", UpdateCheck=UpdateCheck.Never)]
+		public string Usr_CellPhone
+		{
+			get
+			{
+				return this._Usr_CellPhone;
+			}
+			set
+			{
+				if ((this._Usr_CellPhone != value))
+				{
+					this.OnUsr_CellPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Usr_CellPhone = value;
+					this.SendPropertyChanged("Usr_CellPhone");
+					this.OnUsr_CellPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="usr_HomePhone", Storage="_Usr_HomePhone", DbType="VarChar(MAX)", UpdateCheck=UpdateCheck.Never)]
+		public string Usr_HomePhone
+		{
+			get
+			{
+				return this._Usr_HomePhone;
+			}
+			set
+			{
+				if ((this._Usr_HomePhone != value))
+				{
+					this.OnUsr_HomePhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Usr_HomePhone = value;
+					this.SendPropertyChanged("Usr_HomePhone");
+					this.OnUsr_HomePhoneChanged();
 				}
 			}
 		}
@@ -5378,6 +5450,12 @@ namespace SE450Database
 		
 		private System.Nullable<int> _Usr_CurrentChecks;
 		
+		private string _Usr_EmailAddress;
+		
+		private string _Usr_CellPhone;
+		
+		private string _Usr_HomePhone;
+		
 		public Usr_GetAllUsersResult()
 		{
 		}
@@ -5442,6 +5520,54 @@ namespace SE450Database
 				if ((this._Usr_CurrentChecks != value))
 				{
 					this._Usr_CurrentChecks = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="usr_EmailAddress", Storage="_Usr_EmailAddress", DbType="VarChar(MAX)")]
+		public string Usr_EmailAddress
+		{
+			get
+			{
+				return this._Usr_EmailAddress;
+			}
+			set
+			{
+				if ((this._Usr_EmailAddress != value))
+				{
+					this._Usr_EmailAddress = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="usr_CellPhone", Storage="_Usr_CellPhone", DbType="VarChar(MAX)")]
+		public string Usr_CellPhone
+		{
+			get
+			{
+				return this._Usr_CellPhone;
+			}
+			set
+			{
+				if ((this._Usr_CellPhone != value))
+				{
+					this._Usr_CellPhone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="usr_HomePhone", Storage="_Usr_HomePhone", DbType="VarChar(MAX)")]
+		public string Usr_HomePhone
+		{
+			get
+			{
+				return this._Usr_HomePhone;
+			}
+			set
+			{
+				if ((this._Usr_HomePhone != value))
+				{
+					this._Usr_HomePhone = value;
 				}
 			}
 		}
