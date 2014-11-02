@@ -7,15 +7,15 @@ using System.Data.Linq;
 
 namespace SE450_Sleep_Tracker_Web_API.Models
 {
-    public class ChainAnalysis
+    public class ChainAnalysisModel
     {
-        public ChainAnalysis(Chn_ChainAnalysis analysis)
+        public ChainAnalysisModel(Chn_ChainAnalysis analysis)
         {
             this.ID = analysis.Chn_ID;
             // TODO: finish
         }
 
-        public Chn_ChainAnalysis ToChainAnalysis()
+        public Chn_ChainAnalysis ToDBObject()
         {
             Chn_ChainAnalysis analysis = new Chn_ChainAnalysis();
             //analysis.Tht_Thought.AddRange(this.Thoughts.Select(new Tht_Thought() { Tht_Thought1 = );
@@ -47,7 +47,7 @@ namespace SE450_Sleep_Tracker_Web_API.Models
             set;
         }
 
-        public User AssociatedUser
+        public UserModel AssociatedUser
         {
             get;
             set;
