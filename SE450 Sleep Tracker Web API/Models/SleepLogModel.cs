@@ -13,7 +13,7 @@ namespace SE450_Sleep_Tracker_Web_API.Models
             set;
         }
 
-        public User AssociatedUser
+        public UserModel AssociatedUser
         {
             get;
             set;
