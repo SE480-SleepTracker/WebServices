@@ -4,11 +4,12 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel;
 using SE450_Sleep_Tracker_Web_API.Utility;
+using SE450Database;
 
 namespace SE450_Sleep_Tracker_Web_API.Models
 {
     [TypeConverter(typeof(UserConverter))]
-    public class User
+    public class UserModel
     {
         #region Properties
         public int ID
@@ -54,7 +55,19 @@ namespace SE450_Sleep_Tracker_Web_API.Models
         #endregion
 
         #region Public Methods
-        public static bool TryParse(string s, out User result)
+        public UserModel() {}
+
+        public UserModel(Usr_User user)
+        {
+            this.CellPhone = user.Usr_CellPhone;
+            this.EmailAddress = user.Usr_EmailAddress;
+            this.FirstName = user.Usr_FirstName;
+            this.LastName = user.Usr_LastName;
+            this.HomePhone = user.Usr_HomePhone;
+            this.ID = user.Usr_ID;
+        }
+
+        public static bool TryParse(string s, out UserModel result)
         {
             result = null;
 
@@ -65,7 +78,7 @@ namespace SE450_Sleep_Tracker_Web_API.Models
             int id;
             if (int.TryParse(parts[0], out id))
             {
-                result = new User()
+                result = new UserModel()
                 {
                     FirstName = parts[1],
                     LastName = parts[2],
