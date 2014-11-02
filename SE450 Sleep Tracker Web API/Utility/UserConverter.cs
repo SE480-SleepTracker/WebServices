@@ -25,9 +25,9 @@ namespace SE450_Sleep_Tracker_Web_API.Utility
         {
             if (value is string)
             {
-                User user;
+                UserModel user;
 
-                if (User.TryParse((string)value, out user))
+                if (UserModel.TryParse((string)value, out user))
                     return user;
             } // End case where the value is a string
 
